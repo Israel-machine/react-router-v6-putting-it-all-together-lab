@@ -1,7 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import DirectorContainer from './pages/DirectorContainer';
+
 const App = () => {
     return (
         <>
-        {/* define all routes here */}
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" index element={<Home />} />
+                    <Route path="directors" element={ <DirectorContainer />} />
+                    <Route path="about" element={ <About />} />
+                </Routes>
+            </BrowserRouter>
         </>
     )
 }
